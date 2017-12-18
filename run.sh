@@ -6,8 +6,12 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # install flask
-
 pip3 install Flask
+apt-get install -y virtualenv
+
+mkdir $HOME/flask-dev
+virtualenv $HOME/flask_dev
+echo "alias act-flask='$HOME/flask_dev/bin/activate'" >> ~/.bashrc
 
 # install redis
 apt-get install -y redis-server redis-tools
