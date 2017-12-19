@@ -9,8 +9,9 @@ fi
 pip3 install Flask
 apt-get install -y virtualenv
 
-mkdir $HOME/flask-dev
-virtualenv $HOME/flask_dev
+virtualenv -p python3 $HOME/flask_dev
+chgrp haven $HOME/flask_dev
+chown haven $HOME/flask_dev
 echo "alias act-flask='$HOME/flask_dev/bin/activate'" >> ~/.bashrc
 
 # install redis
