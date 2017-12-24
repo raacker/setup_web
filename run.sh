@@ -11,7 +11,7 @@ apt-get install -y virtualenv
 
 sudo -u haven virtualenv -p python3 $HOME/flask_dev
 
-echo "alias act-flask='$HOME/flask_dev/bin/activate'" >> ~/.bashrc
+echo "alias act-flask='source $HOME/flask_dev/bin/activate'" >> ~/.bashrc
 
 # install redis
 apt-get install -y redis-server redis-tools
